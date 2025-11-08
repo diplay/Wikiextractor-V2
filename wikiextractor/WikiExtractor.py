@@ -652,11 +652,7 @@ def main(*args, **kwargs):
                         metavar="n[KMG]")
     groupO.add_argument("--generator", action="store_true",
                         help="output file will be ignored and the script will behave as a yield generator.\n \
-                            OUTPUT format:  doc_id,\n \
-                                            title,\n \
-                                            url,\n \
-                                            languages, \n \
-                                            text")
+                            OUTPUT format:  doc_id, title, url, languages, text")
     groupO.add_argument("--html", action="store_true",
                         help="produce HTML output, subsumes --links")
     groupO.add_argument("-l", "--links", action="store_true",
@@ -674,20 +670,12 @@ def main(*args, **kwargs):
     groupP.add_argument("--templates",
                         help="use or create file containing templates")
     groupP.add_argument("--discard_sections", action="store_true",
-                        help="If specified, it will discard \
-                              some wikipedia sections by their titles (e.g. References, Bibliography). \
-                            The ones(alredy-given) under  config/discard_sections.txt ")
+                        help="If specified, it will discard some wikipedia sections by their titles (e.g. References, Bibliography). The ones(alredy-given) under  config/discard_sections.txt ")
 
     groupP.add_argument("--discard_templates", action="store_true",
-                        help="If specified, it will discard \
-                              some wikipedia docs if containg some templates titles (e.g. Disambiguation, Desambiguación). \
-                              \Since most template names are usually tranlated.  \
-                                See an example under config/discard_templates.txt ")
+                        help="If specified, it will discard some wikipedia docs if containg some templates titles (e.g. Disambiguation, Desambiguación). Since most template names are usually tranlated. See an example under config/discard_templates.txt ")
     groupP.add_argument("--ignore_templates", action="store_true",
-                        help="If specified, it will not expand \
-                              some templates (e.g. Millorar format). \
-                              \Since most template names are usually tranlated.  \
-                                See an example under config/ignore_templates.txt ")
+                        help="If specified, it will not expand some templates (e.g. Millorar format). Since most template names are usually tranlated. See an example under config/ignore_templates.txt")
     groupP.add_argument("--html_safe", default=True,
                         help="use to produce HTML safe output within <doc>...</doc>")
     groupP.add_argument("-ns", "--namespaces", default="", metavar="ns1,ns2",
